@@ -4,5 +4,4 @@
 
 # Using live discourse from inside the Loop, Chicago, Voltaje festival will be updated with headlines relevant to the live discourse every 6 hours. 
 
-# The presented headlines is not pre-determined and will vary from day to day
 # The Loop (Voltaje) does not support a particular political movement or action, and is only a representation of on going discourse of the public
