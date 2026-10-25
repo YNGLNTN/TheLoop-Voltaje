@@ -1,4 +1,4 @@
-# TheLoop (Voltaje)
+# The Loop (Voltaje)
 
 The Loop (Voltaje) is an iteration of The Loop, modified for the Voltaje Festival - connecting The Loop, Chicago and Voltaje, Colombia.
 
