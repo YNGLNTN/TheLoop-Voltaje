@@ -6,4 +6,4 @@ Using live discourse from inside the Loop, Chicago, Voltaje festival will be upd
 Every 6 hours, updates will arrive at BOG, Colombia from ORD, Chicago
 
 
-The Loop (Voltaje) does not support a particular political movement or action, and is only a representation of on going discourse of the public
+The Loop (Voltaje) does not support a particular political movement or action.
