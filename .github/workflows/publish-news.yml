@@ -1,0 +1,42 @@
+name: Refresh and publish news projection
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 0,6,12,18 * * *'
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: news-projection-site
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Retrieve headlines
+        run: python scripts/update_news.py
+      - name: Run offline tests
+        run: python -m unittest discover -s tests -v
+      - name: Set up GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload static website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+      - name: Deploy website
+        id: deploy
+        uses: actions/deploy-pages@v4
